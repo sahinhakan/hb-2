@@ -1,9 +1,13 @@
+import { useContext } from 'react';
 import { Row, Col, PageHeader, Form, Input, Button } from 'antd';
 import { useNavigate } from "react-router-dom";
 import './NewLink.css';
 
+import LinkContext from "../context/LinkContext";
+
 const NewLink = () => {
     const navigate = useNavigate();
+    const { link, addLink } = useContext(LinkContext);
 
     return (
         <div>
@@ -19,7 +23,12 @@ const NewLink = () => {
                             <Input placeholder="e.g. http://abc.xyz"/>     
                         </Form.Item>
                         <Form.Item wrapperCol={{ span: 6, offset: 18 }}>
-                            <Button type='primary' block="true" shape='round'>ADD</Button>
+                            <Button type='primary' block="true" shape='round'
+                                onClick={ () => {
+                                    addLink(3)
+                                }}
+                            >
+                            ADD</Button>
                         </Form.Item>
                     </Form>
                 </Col>
