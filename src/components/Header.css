@@ -1,0 +1,22 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+}
+
+.appName {
+    display: flex;
+    align-items: flex-end;
+}
+
+.appNameText {
+    margin-bottom: -4px;
+}
+
+.header-div {
+    padding-top: 15px;
+}
+
+.header-img {
+    height: 30px;
+}
