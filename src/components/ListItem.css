@@ -1,0 +1,41 @@
+.item-point {
+    background-color: #f6a342;
+    height: 70px;
+    width: 70px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.item-detail {
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.detail-text {
+    margin-bottom: 0;
+}
+
+.vote-buttons {
+    width: 100%;
+    padding-left: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.pointNumber {
+
+}
+
+.pointText {
+
+}
+
+.row {
+    width: 100% !important;
+}
