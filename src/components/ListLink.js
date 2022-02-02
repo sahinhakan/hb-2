@@ -2,14 +2,15 @@ import { Button, Dropdown, Menu, List, Divider, Row, Col } from "antd";
 import { DownOutlined } from '@ant-design/icons';
 import ListItem from "./ListItem";
 import { useNavigate } from "react-router-dom";
+import "./ListLink.css";
 
 const ListLink = () => {
     const orderByMenu = (
         <Menu>
             <Menu.Item>Most Voted</Menu.Item>
             <Menu.Item>Less Voted</Menu.Item>
-            <Menu.Item danger>Danger Item</Menu.Item>
-            <Menu.Item disabled>Disabled Item</Menu.Item>
+            {/* <Menu.Item danger>Danger Item</Menu.Item>
+            <Menu.Item disabled>Disabled Item</Menu.Item> */}
         </Menu>
     );
     
@@ -19,7 +20,7 @@ const ListLink = () => {
     let aList = [1,2,3,4,5];
 
     return (
-        <div style={{flexDirection: "column", alignItems: "stretch"}}>
+        <div className="container">
             <Row >
                 <Col span={8} offset={8}>
                     <Button type="primary" 
@@ -29,19 +30,19 @@ const ListLink = () => {
                             navigate("/new");
                         }}
                     >SUBMIT A LINK</Button>
-                    {/* <Divider>List</Divider> */}
+                    <Divider></Divider>
                     <List
                         bordered="true"
                         header={
                             <Dropdown overlay={orderByMenu} >
-                                <Button type="dashed" shape="round" >
+                                <Button type="dashed" shape="default" >
                                     Order by <DownOutlined />
                                 </Button>
                             </Dropdown>
                         }
                         dataSource={aList}
                         renderItem={item => (
-                            <List.Item style={{flexDirection: "column", alignItems: "stretch"}}>
+                            <List.Item>
                                 <ListItem/>
                             </List.Item>
                         )}
