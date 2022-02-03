@@ -4,7 +4,7 @@ const LinkContext = createContext()
 
 export const LinkProvider = ({ children }) => {
 
-    const [link, setLink] = useState([1,2]);
+    const [link, setLink] = useState([]);
 
     const addLink = (oLink) => {
         //link.push(oLink)

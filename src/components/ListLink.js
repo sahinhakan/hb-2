@@ -48,7 +48,7 @@ const ListLink = () => {
                         dataSource={link}
                         renderItem={item => (
                             <List.Item>
-                                <ListItem/>
+                                <ListItem data={item}/>
                             </List.Item>
                         )}
                     />
