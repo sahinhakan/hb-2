@@ -2,3 +2,20 @@
     flex-direction: column;
     align-items: stretch;
 }
+
+.ant-col .submit-a-link-button{
+    
+    background-color: #f6a342 !important;
+}
+
+.ant-list {
+    border-color: #f6a342 !important;
+}
+
+.ant-list-header .dropdown-button {
+    border-color: #f6a342 !important;
+}
+
+.ant-list-header .dropdown-button:hover {
+    color: #f6a342 !important;
+}

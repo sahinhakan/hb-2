@@ -4,6 +4,7 @@ import { DownOutlined } from '@ant-design/icons';
 import ListItem from "./ListItem";
 import { useNavigate } from "react-router-dom";
 import "./ListLink.css";
+import { FileAddOutlined, PlusOutlined } from '@ant-design/icons';
 
 import LinkContext from "../context/LinkContext";
 
@@ -28,10 +29,10 @@ const ListLink = () => {
         <div className="container">
             <Row >
                 <Col span={8} offset={8}>
-                    <Button type="primary" 
+                    <Button type="default" className="submit-a-link-button" shape="round" size="large" block="true"
+                        icon={<PlusOutlined />}
                         onClick={(event) => {
                             event.preventDefault(); 
-                            //todo: navigate to new link page
                             navigate("/new");
                         }}
                     >SUBMIT A LINK</Button>
@@ -40,7 +41,7 @@ const ListLink = () => {
                         bordered="true"
                         header={
                             <Dropdown overlay={orderByMenu} >
-                                <Button type="dashed" shape="default" >
+                                <Button type="default" shape="default" className="dropdown-button">
                                     Order by <DownOutlined />
                                 </Button>
                             </Dropdown>
