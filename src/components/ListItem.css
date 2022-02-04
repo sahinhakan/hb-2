@@ -28,6 +28,14 @@
     justify-content: space-between;
 }
 
+.vote-buttons .up-button {
+    color: green;
+}
+
+.vote-buttons .down-button {
+    color: red;
+}
+
 .pointNumber {
 
 }

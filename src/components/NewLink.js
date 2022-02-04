@@ -7,7 +7,7 @@ import LinkContext from "../context/LinkContext";
 
 const NewLink = () => {
     const navigate = useNavigate();
-    const { addLink } = useContext(LinkContext);
+    const { addLink, createLinkObject } = useContext(LinkContext);
 
     //antd form'da bu önerilmiyor. onFinish ile hem validate  hem de submit edebiliyorsun
     /* const [name, setName ] = useState("");
